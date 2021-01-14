@@ -20,10 +20,10 @@ opt.add_argument("--disable-extensions")
 opt.add_argument("--start-maximized")
 # Pass the argument 1 to allow and 2 to block
 opt.add_experimental_option("prefs", { \
-    "profile.default_content_setting_values.media_stream_mic": 1, 
+    "profile.default_content_setting_values.media_stream_mic": 1,
     "profile.default_content_setting_values.media_stream_camera": 1,
-    "profile.default_content_setting_values.geolocation": 1, 
-    "profile.default_content_setting_values.notifications": 1 
+    "profile.default_content_setting_values.geolocation": 1,
+    "profile.default_content_setting_values.notifications": 1
   })
 
 # driver = webdriver.Chrome(chrome_options=opt,service_log_path='NUL')
@@ -31,7 +31,7 @@ driver = None
 URL = "https://teams.microsoft.com"
 
 #put your teams credentials here
-CREDS = {'email' : '','passwd':''}
+CREDS = {'Kai.Neubert@krs.hanau.schule' : '','$hobertH187':''}
 
 
 
@@ -179,7 +179,7 @@ def joinclass(class_name,start_time,end_time):
 	joinnowbtn.click()
 
 	discord_webhook.send_msg(class_name=class_name,status="joined",start_time=start_time,end_time=end_time)
-	
+
 	#now schedule leaving class
 	tmp = "%H:%M"
 
@@ -260,7 +260,7 @@ def sched():
 if __name__=="__main__":
 	# joinclass("Maths","15:13","15:15","sunday")
 	op = int(input(("1. Modify Timetable\n2. View Timetable\n3. Start Bot\nEnter option : ")))
-	
+
 	if(op==1):
 		add_timetable()
 	if(op==2):
